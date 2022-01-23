@@ -33,9 +33,9 @@ def calcrequiredworkers(bufpercent):
     calpodtotalcapacity(PodList, CalcPodLoadDict) 
     
     # Calcualte available resourse excluding buffers. floor rounds down decimal to integer
-    WorkerActCPU = math.floor(WorkerNodeList[0]['CPU'] * (bufpercent/100))
-    WorkerActRAM = math.floor(WorkerNodeList[0]['RAM'] * (bufpercent/100))
-    WorkerActStorage = math.floor(WorkerNodeList[0]['Storage'] * (bufpercent/100))
+    WorkerActCPU = math.floor(WorkerNodeList[0]['CPU'] * 0.9)
+    WorkerActRAM = math.floor(WorkerNodeList[0]['RAM'] * 0.9)
+    WorkerActStorage = math.floor(WorkerNodeList[0]['Storage'] * 0.9)
 
     # Calcualte total CPU, RAM, Storage required from worker. ceil rounds up decimal to integer    
     CalcReqWorkersDict['CPU'] = math.ceil(CalcPodLoadDict['CPU'] / WorkerActCPU)
@@ -59,7 +59,7 @@ if __name__ == "__main__":
     parser.add_argument('-p', '--podpath',required=True, help="path to JSON file with pod information")
     parser.add_argument('-w', '--workerpath',required=True, help="path to JSON file with workers information")
     parser.add_argument('-v', '--vmpath',required=True, help="path to JSON file with virtual machine information")
-    parser.add_argument('-b', '--buffer',type=int, default=90, help="reserved buffer in percentage to consider per worker")
+    #parser.add_argument('-b', '--buffer',type=int, default=90, help="reserved buffer in percentage to consider per worker")
     parser.add_argument('-o', '--outfile',required=True, help="path to output file to write the results")
     args = parser.parse_args()
     args_dict = vars(args)
