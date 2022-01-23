@@ -1,0 +1,28 @@
+{
+   "VirtualMachine": [
+      {
+         "VM": "VM1",
+		 "CPU": 8, 
+		 "RAM": 8,
+		 "Storage": 16
+      },
+      {
+         "VM": "VM2",
+		 "CPU": 2, 
+		 "RAM": 4,
+		 "Storage": 4
+      },
+      {
+         "VM": "VM3",
+		 "CPU": 1, 
+		 "RAM": 2,
+		 "Storage": 3
+      },
+      {
+         "VM": "VM4",
+		 "CPU": 1, 
+		 "RAM": 2,
+		 "Storage": 3
+      }
+   ]
+}

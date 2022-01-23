@@ -1,0 +1,20 @@
+{
+   "pods": [
+      {
+         "PodName": "POD01",
+		 "CPU": 1, 
+		 "RAM": 2,
+		 "Storage": 3,
+		 "Replicas": 4,
+		 "Affinity": 0
+      },
+      {
+         "PodName": "POD02",
+		 "CPU": 2, 
+		 "RAM": 3,
+		 "Storage": 4,
+		 "Replicas": 6,
+		 "Affinity": 0 
+      }
+   ]
+}

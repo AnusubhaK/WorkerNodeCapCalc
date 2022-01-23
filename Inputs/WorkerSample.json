@@ -1,0 +1,10 @@
+{
+   "WorkerNodes": [
+      {
+         "WorkerNode": "Node1",
+		 "CPU": 8, 
+		 "RAM": 8,
+		 "Storage": 16
+      }
+   ]
+}
